@@ -1,4 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { DEFAULT_KEY } from "../constants";
 // Async not being declared as callback system is being used to better align with React Native's `UseEffect()`
 
 const set_settings_to_default = (keys: string[], value: any) => {
@@ -36,7 +37,7 @@ export const validateSettings = () => {
         set_settings_to_default(true_default_boolean_settings_keys, true);
 
         // TODO: Then set defaults for more complex settings
-        set_setting_to_default("maitea-key", "N/A");
+        set_setting_to_default("maitea-key", DEFAULT_KEY);
     }
     catch (e) {
         alert(`Error validating settings: ${e}`)

@@ -5,7 +5,7 @@ import { TamaguiProvider, Theme } from "tamagui";
 import appConfig from "./tamagui.config";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
-import { validateSettings } from "./settings/storedSettings";
+import { validateSettings } from "../settings/storedSettings";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 type Props = {
@@ -32,7 +32,7 @@ export default function AppContainer({ children }: Props) {
 
   return (
     <SafeAreaProvider>
-      <TamaguiProvider config={appConfig}>{children}</TamaguiProvider>
+      <TamaguiProvider config={appConfig} defaultTheme="dark_purple">{children}</TamaguiProvider>
     </SafeAreaProvider>
   );
 }

@@ -2,7 +2,7 @@ import { Text, Stack, Theme } from "tamagui";
 import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { FooterButton } from "./FooterButton";
-import React from "react";
+import React, { useState } from "react";
 import { Contact, HelpCircle, Home, Settings } from "@tamagui/lucide-icons";
 import { LinearGradient } from "@tamagui/linear-gradient";
 

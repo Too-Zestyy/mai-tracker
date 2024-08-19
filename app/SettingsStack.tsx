@@ -1,22 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Adapt, Button, Checkbox, Form, H2, H4, Input, Label, Select, Separator, Sheet, Slider, Spinner, Stack, Switch, Text, Theme, useWindowDimensions, XStack, YStack } from "tamagui";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { KeySaveAlertDialog } from "./components/KeySaveAlertDialog";
-import { DialogInstance } from "./components/KeySaveDialog";
+import { KeySaveAlertDialog } from "../components/KeySaveAlertDialog";
+import { DialogInstance } from "../components/KeySaveDialog";
 import { Check, Italic } from "@tamagui/lucide-icons";
 
-import {saveMaiTeaKey, getMaiTeaKey} from "./settings/storedSettings";
-import { getStoredBooleanSettingValue } from "./settings/settingsChecks";
-import BooleanSettingSwitch from "./components/SettingsStack/BooleanSettingSwitch";
-import ColouredSpinner from "./components/ColouredSpinner";
+import {saveMaiTeaKey, getMaiTeaKey} from "../settings/storedSettings";
+import { getStoredBooleanSettingValue } from "../settings/settingsChecks";
+import BooleanSettingSwitch from "../components/SettingsStack/BooleanSettingSwitch";
+import ColouredSpinner from "../components/ColouredSpinner";
 
 export default function SettingsStack() {
-    // TODO: use callbacks for `UseEffect()` so key shows up when going to settings without interaction (like typing in the key box)
-    // TODO: Look into adding a ref to the switch's tracking of a setting, and making the settings stack wait for the switch to get them - keeps getting settings to only the switch
-    
     // TODO NEW: `useEffect()` can fire when a reactive dependency updates: https://react.dev/reference/react/useEffect#specifying-reactive-dependencies
     // Look into using this to get a child component's state, and listen for a change (which then would fire useEffect and use `setLoaded()`) 
+
+    // Remove storage capabilities from the switch + label group, then move them to the group of switches needed for settings
+    // Then place that group in the settings panel
     // Possible source for child state: https://react.dev/learn/sharing-state-between-components
+
 
     // https://stackoverflow.com/questions/27864951/how-to-access-a-childs-state-in-react
     // https://stackoverflow.com/questions/27864951/how-to-access-a-childs-state-in-react/27875018#27875018

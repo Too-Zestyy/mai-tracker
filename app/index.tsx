@@ -20,7 +20,7 @@
 // });
 
 import { Text, View, XStack, YStack, TamaguiProvider, Theme, Paragraph, ZStack, Stack } from 'tamagui'
-import config from "./tamagui.config";
+import config from "tamagui.config";
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'react-native';
 import { useFonts } from 'expo-font';
